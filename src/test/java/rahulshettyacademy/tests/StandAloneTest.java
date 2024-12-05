@@ -22,6 +22,7 @@ public class StandAloneTest {
 
 		String productName = "ZARA COAT 3";
 		WebDriverManager.chromedriver().setup();
+		System.out.println("WebDriverManager is being called here");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
