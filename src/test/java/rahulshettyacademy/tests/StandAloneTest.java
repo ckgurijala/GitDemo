@@ -30,6 +30,7 @@ public class StandAloneTest {
 		driver.findElement(By.id("userEmail")).sendKeys("anshika@gmail.com");
 		driver.findElement(By.id("userPassword")).sendKeys("Iamking@000");
 		driver.findElement(By.id("login")).click();
+		System.out.println("Successfully logged In");
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".mb-3")));
 			List<WebElement> products = driver.findElements(By.cssSelector(".mb-3"));

@@ -36,6 +36,7 @@ public class ErrorValidationsTest extends BaseTest {
 		ProductCatalogue productCatalogue = landingPage.loginApplication("rahulshetty@gmail.com", "Iamking@000");
 		List<WebElement> products = productCatalogue.getProductList();
 		productCatalogue.addProductToCart(productName);
+		System.out.println(productName);
 		CartPage cartPage = productCatalogue.goToCartPage();
 		Boolean match = cartPage.VerifyProductDisplay("ZARA COAT 33");
 		Assert.assertFalse(match);
