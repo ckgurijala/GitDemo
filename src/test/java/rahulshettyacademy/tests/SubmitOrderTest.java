@@ -44,6 +44,7 @@ public class SubmitOrderTest extends BaseTest{
 		List<WebElement> products = productCatalogue.getProductList();
 		productCatalogue.addProductToCart(input.get("product"));
 		CartPage cartPage = productCatalogue.goToCartPage();
+		System.out.println(cartPage);
 
 		Boolean match = cartPage.VerifyProductDisplay(input.get("product"));
 		Assert.assertTrue(match);
